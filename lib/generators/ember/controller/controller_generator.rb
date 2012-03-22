@@ -8,7 +8,7 @@ class Ember::ControllerGenerator < Rails::Generators::NamedBase
 
   def generate_views
     routes.each do |route|
-      generate 'ember:view', controller_name, route.name
+      generate 'ember:view', controller_name, route
     end
   end
 
