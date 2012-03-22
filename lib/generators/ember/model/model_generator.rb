@@ -20,6 +20,6 @@ class Ember::ModelGenerator < Rails::Generators::NamedBase
   end
 
   def schema
-    attributes.map{|a| a.split(":")}.each{|a| a << 'String'}.reduce({}){|hsh, atr| hsh[atr[0]] = atr[1]; hsh}
+    attributes.map{|a| a.to_s.split(":") << "String" }.reduce({}){|hsh, atr| hsh[atr[0]] = atr[1]; hsh}
   end
 end
