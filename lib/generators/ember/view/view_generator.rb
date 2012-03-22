@@ -1,4 +1,8 @@
+require_relative '../generator_helpers'
+
 class Ember::ViewGenerator < Rails::Generators::Base
+  include Ember::GeneratorHelpers
+
   source_root File.expand_path("../templates", __FILE__)
   argument :controller_name, :type => :string
   argument :view_name, :type => :string
@@ -16,10 +20,6 @@ class Ember::ViewGenerator < Rails::Generators::Base
   end
 
   private
-
-  def application_name
-    Rails.application
-  end
 
   def template_name
     view_name.underscore

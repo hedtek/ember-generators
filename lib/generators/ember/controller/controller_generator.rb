@@ -1,4 +1,7 @@
+require_relative '../generator_helperss'
+
 class Ember::ControllerGenerator < Rails::Generators::NamedBase
+  include Ember::GeneratorHelpers
   source_root File.expand_path("../templates", __FILE__)
   argument :routes, :type => :array, :default => [], :banner => "route route"
 
@@ -13,9 +16,6 @@ class Ember::ControllerGenerator < Rails::Generators::NamedBase
   end
 
   private
-  def application_name
-    Rails.application.class.name.split('::').first
-  end
 
   def controller_name
     file_name.underscore

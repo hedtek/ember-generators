@@ -1,4 +1,8 @@
+require_relative '../generator_helpers'
+
 class Ember::ModelGenerator < Rails::Generators::NamedBase
+  include Ember::GeneratorHelpers
+
   source_root File.expand_path("../templates", __FILE__)
   argument :attributes, :type => :array, :default => [], :banner => "field[:type] field[:type]"
 
@@ -7,9 +11,6 @@ class Ember::ModelGenerator < Rails::Generators::NamedBase
   end
 
   private
-  def application_name
-    Rails.application.class.name.split('::').first
-  end
 
   def model_name
     file_name.underscore
