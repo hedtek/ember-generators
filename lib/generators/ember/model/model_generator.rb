@@ -7,7 +7,7 @@ class Ember::ModelGenerator < Rails::Generators::NamedBase
   argument :attributes, :type => :array, :default => [], :banner => "field[:type] field[:type]"
 
   def generate_directory
-    directory 'app/assets/javascripts/ember/models'
+    empty_directory 'app/assets/javascripts/ember/models'
   end
 
   def generate_model

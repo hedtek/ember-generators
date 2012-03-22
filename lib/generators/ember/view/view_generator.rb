@@ -8,7 +8,7 @@ class Ember::ViewGenerator < Rails::Generators::Base
   argument :view_name, :type => :string
 
   def generate_directory
-    directory "app/assets/javascripts/ember/views/#{controller_name}"
+    empty_directory "app/assets/javascripts/ember/views/#{controller_name}"
   end
 
   def generate_view_namespace
