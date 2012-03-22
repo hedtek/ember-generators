@@ -1,5 +1,5 @@
 <%= application_name %>.Models.<%= model_name %> = Ember.Resource.define
-  url: '<%%=<%= route_name %>%%>'
+  url: '<%%=<%= route_name %>%>'
   schema:
 <%- schema.each do |name, type| %>
     <%= name %>: <%= type %>
