@@ -1,7 +1,6 @@
 require "ember-generators/version"
 
-module Ember
-  module Generators
-    # Your code goes here...
+module EmberGenerators
+  class Engine < Rails::Engine
   end
 end

@@ -2,8 +2,8 @@
 require File.expand_path('../lib/ember-generators/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["David Workman"]
-  gem.email         = ["workmad3@gmail.com"]
+  gem.authors       = ["David Workman", "Hedtek Ltd."]
+  gem.email         = ["david@hedtek.com"]
   gem.description   = %q{Generators for working with ember.js in rails}
   gem.summary       = %q{A set of generators to ease the creation of files when using ember.js in rails}
   gem.homepage      = "https://github.com/hedtek/ember-generators"
@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "ember-generators"
   gem.require_paths = ["lib"]
   gem.version       = Ember::Generators::VERSION
+  gem.add_dependency "rails", "~> 3.1"
+  gem.add_dependency "ember-rails", "~> 0.2.4"
 end
