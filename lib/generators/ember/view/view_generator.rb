@@ -12,11 +12,11 @@ class Ember::ViewGenerator < Rails::Generators::Base
   end
 
   def generate_view
-    template 'view.js.coffee.erb', "app/assets/javascripts/ember/views/#{view_name}.js.coffee"
+    template 'view.js.coffee', "app/assets/javascripts/ember/views/#{view_name}.js.coffee"
   end
 
   def generate_template
-    template 'template.js.coffee.erb', "app/assets/javascripts/ember/templates/#{template_name}.js.coffee"
+    template 'template.js.hjs.haml', "app/assets/javascripts/ember/templates/#{template_name}.js.hjs.haml"
   end
 
   private
