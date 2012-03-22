@@ -6,6 +6,12 @@ class Ember::ControllerGenerator < Rails::Generators::NamedBase
     template 'controller.js.coffee', "app/assets/javascripts/ember/controllers/#{controller_name}_controller.js.coffee"
   end
 
+  def generate_views
+    routes.each do |route|
+      generate 'ember:view', route.name
+    end
+  end
+
   private
   def application_name
     Rails.application.class.name.split('::').first

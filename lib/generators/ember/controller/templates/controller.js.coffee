@@ -5,6 +5,6 @@
   <%- routes.each do |route| %>
     <%= route %>: <%= application_name.camelize %>.LayoutState.create
       route: '<%= route %>'
-      contentView: <%= application_name.camelize %>.Views.<%= route %>
+      contentView: <%= application_name.camelize %>.Views.<%= controller_name %>.<%= route %>
 
   <%- end %>
