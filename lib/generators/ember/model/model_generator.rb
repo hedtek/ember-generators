@@ -6,6 +6,10 @@ class Ember::ModelGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("../templates", __FILE__)
   argument :attributes, :type => :array, :default => [], :banner => "field[:type] field[:type]"
 
+  def generate_directory
+    directory 'app/assets/javascripts/ember/models'
+  end
+
   def generate_model
     template 'model.js.coffee.erb', "app/assets/javascripts/ember/models/#{model_name}.js.coffee"
   end

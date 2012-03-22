@@ -5,6 +5,10 @@ class Ember::ControllerGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("../templates", __FILE__)
   argument :routes, :type => :array, :default => [], :banner => "route route"
 
+  def generate_directory
+    directory 'app/assets/javascripts/ember/controllers'
+  end
+
   def generate_controller
     template 'controller.js.coffee', "app/assets/javascripts/ember/controllers/#{controller_name}_controller.js.coffee"
   end
