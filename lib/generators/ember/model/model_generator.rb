@@ -20,6 +20,6 @@ class Ember::ModelGenerator < Rails::Generators::NamedBase
   end
 
   def schema
-    attributes.map{|a| [a.name, a.type.constantize]}
+    attributes.map{|a| [a.name, a.type.to_s.constantize]}
   end
 end
