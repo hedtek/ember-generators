@@ -1,4 +1,4 @@
-require_relative '../generator_helperss'
+require_relative '../generator_helpers'
 
 class Ember::ControllerGenerator < Rails::Generators::NamedBase
   include Ember::GeneratorHelpers
