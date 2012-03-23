@@ -15,6 +15,8 @@ to bootstrap your application with ember and create a basic framework.
 
 ## Ember bootstrap
 
+    rails g ember:bootstrap
+    
 Bootstraps your application with a basic coffeescript framework for front-end routing, templates and views using Ember.js and some ember libraries.
 
 ## (Ember) Model
