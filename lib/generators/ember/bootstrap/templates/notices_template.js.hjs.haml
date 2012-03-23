@@ -1,0 +1,5 @@
+{{#each <%=application_name%>.Controllers.notices}}
+  {{#view <%=application_name%>.Views.notice noticeBinding="this"}}
+    {{notice.text}} <a href='' class="close" {{action removeNotice}}>×</a>
+  {{/view}}
+{{/each}}

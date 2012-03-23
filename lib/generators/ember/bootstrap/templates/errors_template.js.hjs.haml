@@ -1,0 +1,5 @@
+{{#each <%=application_name%>.Controllers.errors}}
+  {{#view <%=application_name%>.Views.error errorBinding="this"}}
+    {{error.text}} <a href='' class="close" {{action removeError}}>×</a>
+  {{/view}}
+{{/each}}

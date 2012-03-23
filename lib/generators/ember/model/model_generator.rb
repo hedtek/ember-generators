@@ -7,11 +7,15 @@ class Ember::ModelGenerator < Rails::Generators::NamedBase
   argument :attributes, :type => :array, :default => [], :banner => "field[:type] field[:type]"
 
   def generate_directory
-    empty_directory 'app/assets/javascripts/ember/models'
+    empty_directory "#{ember_path}/models"
   end
 
   def generate_model
-    template 'model.js.coffee.erb', "app/assets/javascripts/ember/models/#{model_name}.js.coffee"
+    template 'model.js.coffee.erb', "#{ember_path}/models/#{model_name}.js.coffee"
+  end
+
+  def generate_specs
+    template 'model_spec.js.coffee', "spec/javascripts/models/#{model_name}_spec.js.coffee"
   end
 
   private

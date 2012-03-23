@@ -6,17 +6,21 @@ class Ember::ControllerGenerator < Rails::Generators::NamedBase
   argument :routes, :type => :array, :default => [], :banner => "route route"
 
   def generate_directory
-    empty_directory 'app/assets/javascripts/ember/controllers'
+    empty_directory "#{ember_path}/controllers"
   end
 
   def generate_controller
-    template 'controller.js.coffee', "app/assets/javascripts/ember/controllers/#{controller_name}_controller.js.coffee"
+    template 'controller.js.coffee', "#{ember_path}/controllers/#{controller_name}_controller.js.coffee"
   end
 
   def generate_views
     routes.each do |route|
       generate 'ember:view', controller_name, route
     end
+  end
+
+  def generate_specs
+    template 'controller_spec.js.coffee', "#{spec_path}/controllers/#{controller_name}_controller_spec.js.coffee"
   end
 
   private
