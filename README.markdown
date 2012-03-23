@@ -1,5 +1,5 @@
 # Ember Rails Generators
-A set of generators for rails projects using ember.js. Generators provided are:
+A set of generators for rails projects using ember.js.
 
 ## Installation
 
@@ -19,7 +19,7 @@ to bootstrap your application with ember and create a basic framework.
     
 Bootstraps your application with a basic coffeescript framework for front-end routing, templates and views using Ember.js and some ember libraries.
 
-## (Ember) Model
+## Ember Model
 
     rails g ember:model model_name [attr1:number attr2:string]
 
@@ -27,13 +27,13 @@ Generates an ember-resource model in app/assets/javascripts/ember/models
 
 The ember-resource model has a schema defining the attributes the model knows about. If no type is provided, string is assumed.
 
-## (Ember) View
+## Ember View
 
     rails g ember:view controller_name view_name
 
 Generates a view and template in app/assets/javascripts/ember/views/controller_name and app/assets/javascripts/ember/templates/controller_name
 
-## (Ember) Controller
+## Ember Controller
 
     rails g ember:controller controller_name [route1 route2]
 
