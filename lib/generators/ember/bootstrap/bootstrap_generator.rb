@@ -5,13 +5,12 @@ class Ember::BootstrapGenerator < Rails::Generator::Base
 
   def add_gems
     gem_group :assets do
-      gem 'tilt'
-      gem 'haml_assets'
+      %w(tilt haml_assests ember-layout ember-resource ember-routemanager).each do |name|
+        gem name
+      end
+
       gem 'handlebars_haml_assets', :git => "https://github.com/leahpar/handlebars_haml_assets.git"
       gem 'asset_pipeline_routes', :git => "https://github.com/leahpar/asset_pipeline_routes.git"
-      %w(ember-layout ember-resource ember-routemanager).each do |name|
-        gem name, :git => "https://github.com/hedtek/#{name}.git"
-      end
     end
   end
 
