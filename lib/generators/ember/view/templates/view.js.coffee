@@ -2,4 +2,4 @@
 //= require_self
 
 <%= application_name %>.Views.<%= controller_name %>.<%= view_name %> = Ember.View.extend
-  templateName: 'app/assets/javascripts/ember/templates/<%= controller_name %>/<%= template_name %>
+  templateName: 'app/assets/javascripts/ember/templates/<%= controller_name %>/<%= template_name %>'
