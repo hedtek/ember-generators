@@ -11,7 +11,7 @@ class Ember::ModelGenerator < Rails::Generators::NamedBase
   end
 
   def generate_model
-    template 'model.js.coffee.erb', "#{ember_path}/models/#{model_name}.js.coffee"
+    template 'model.js.coffee.erb', "#{ember_path}/models/#{model_name}.js.coffee.erb"
   end
 
   def generate_specs
