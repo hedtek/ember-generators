@@ -4,6 +4,7 @@
   <%- routes.each do |route| %>
   <%= route.underscore %>: ->
     # Handle click or submit events from view here
+    null
   <%- end %>
 
   state: Ember.State.create
