@@ -28,4 +28,5 @@ class Ember::ControllerGenerator < Rails::Generators::NamedBase
   def controller_name
     file_name.underscore
   end
+
 end

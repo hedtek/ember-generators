@@ -16,7 +16,7 @@ class Ember::ViewGenerator < Rails::Generators::Base
   end
 
   def generate_view
-    template 'view.js.coffee', "app/assets/javascripts/ember/views/#{controller_name}/#{view_name}.js.coffee"
+    template 'view.js.coffee', "app/assets/javascripts/ember/views/#{controller_name}/#{view_name.underscore}.js.coffee"
   end
 
   def generate_template

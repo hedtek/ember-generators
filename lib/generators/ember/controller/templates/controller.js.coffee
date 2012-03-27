@@ -3,8 +3,8 @@
 
   state: Ember.State.create
   <%- routes.each do |route| %>
-    <%= route %>: <%= application_name.camelize %>.LayoutState.create
+    <%= route.underscore %>: <%= application_name.camelize %>.LayoutState.create
       route: '<%= route %>'
-      contentView: <%= application_name.camelize %>.Views.<%= controller_name %>.<%= route %>
+      contentView: <%= application_name.camelize %>.Views.<%= controller_name %>.<%= route.underscore %>
 
   <%- end %>
