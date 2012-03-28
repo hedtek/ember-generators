@@ -17,7 +17,7 @@ describe "<%= controller_name %> controller specs", ->
 <%- routes.each do |r| %>
   describe "<%= r %>", ->
     beforeEach ->
-      controller.<%= r.underscore %>
+      controller.<%= r.underscore %>()
       request = mostRecentAjaxRequest()
 
 
