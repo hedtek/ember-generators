@@ -12,6 +12,12 @@ class Ember::BootstrapGenerator < Rails::Generator::Base
       gem 'handlebars_haml_assets', :git => "https://github.com/leahpar/handlebars_haml_assets.git"
       gem 'asset_pipeline_routes', :git => "https://github.com/leahpar/asset_pipeline_routes.git"
     end
+
+    gem_group :development, :tests do
+      gem 'jasmine'
+      gem 'jasminerice'
+      gem 'jasmine-ajax'
+    end
   end
 
   # Bootstrap generation from ember-rails. Copied here rather than reused to allow customisation of the generated app file
