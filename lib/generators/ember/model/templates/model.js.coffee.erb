@@ -1,4 +1,13 @@
 <%= application_name %>.Models.<%= model_name %> = Ember.Resource.define
   url: '<%%= r.<%= route_name %>%>'
+  <%- if schema %>
   schema:<%- schema.each do |name, type| %>
     <%= name %>: <%= type %> <%- end %>
+  <%- else %>
+  schema: {}
+  # Usage:
+  #
+  # schema:
+  #   attr1: Number
+  #   attr2: String
+  <%- end %>
