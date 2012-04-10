@@ -15,5 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Ember::Generators::VERSION
   gem.add_dependency "rails", "~> 3.1"
-  gem.add_dependency "ember-rails", "~> 0.2.4"
+  gem.add_dependency "ember-rails", ">= 0.2.4"
 end
