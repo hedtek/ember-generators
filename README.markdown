@@ -5,7 +5,7 @@ A set of generators for rails projects using ember.js.
 
 Add the line
 
-    gem 'ember-generators', :git => 'https://github.com/hedtek/ember-generators.git'
+    gem 'ember-generators'
 
 to your rails Gemfile and run 'bundle install'. Then run 
 
